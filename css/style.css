@@ -665,12 +665,18 @@ padding: 2rem;
 
 .w-block .blog-feed{
   display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1400px) {
+  .w-block .blog-feed {
+    flex-direction: column;
+  }
 }
 
 .w-block .blog-feed li{
   padding: 1rem;
 }
-
 
 .w-block .blog-feed li a{
   text-decoration: none;
