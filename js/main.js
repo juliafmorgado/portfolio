@@ -26,7 +26,7 @@ const api = 'https://dev.to/api/articles?'
 
 // Helper function
 // Create elements
-function createNode(element){
+function createNode(element){git 
     return document.createElement(element)
 }
 

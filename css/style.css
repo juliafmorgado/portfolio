@@ -453,12 +453,18 @@ header .shape-8 {
 .videos{
 display: flex;
 justify-content: center;
+flex-direction: row;
 }
 
 .video{
 padding: 2rem;
 }
 
+@media (max-width: 1400px) {
+  .videos {
+    flex-direction: column;
+  }
+}
 
 /*------ END VIDEOS ------*/
 
