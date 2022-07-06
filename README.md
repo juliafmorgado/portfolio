@@ -15,6 +15,7 @@
 <ul>
 <li>Improve styling</li>
 <li>Self-hosted blog</li>
+ <li>Carousel for blog posts</li>
 <li>Add modal boxes for each project (with description)</li>
 </ul>
 
