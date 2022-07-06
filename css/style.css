@@ -460,9 +460,22 @@ flex-direction: row;
 padding: 2rem;
 }
 
+iframe{
+  width: 450px;
+  height: 253px;
+}
+
 @media (max-width: 1400px) {
   .videos {
     flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px){
+  iframe{
+    width: 350px;
+    height: 170px;
   }
 }
 
