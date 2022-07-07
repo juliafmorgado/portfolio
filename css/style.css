@@ -463,6 +463,7 @@ padding: 2rem;
 iframe{
   width: 450px;
   height: 253px;
+  max-width: 100%;
 }
 
 @media (max-width: 1400px) {
