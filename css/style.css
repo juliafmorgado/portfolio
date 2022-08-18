@@ -1550,4 +1550,30 @@ p.text {
       margin: 0.25rem 0;
     }
   }
+
+  /*------ SERVICES ------*/
+  .services{
+    background-color: #f4f8fb;
+  }
+
+   /*------ END SERVICES ------*/
   
+  /*------ SERVICES / PRICING ------*/
+  
+  .cards h4{
+    font-size: 3rem;
+    font-family: 'Fredericka the Great', cursive;
+    color: #4F90C2;
+  }
+
+  .cards h6{
+    display: block;
+    padding: 0.8rem 0 0.5rem 0;
+    font-size: 1rem;
+  }
+
+   /*------ END SERVICES / PRICING ------*/
+
+   /*------ SERVICES / METRICS ------*/
+
+   /*------ END SERVICES / METRICS ------*/
