@@ -189,8 +189,9 @@ button {
 }
 
 .btn.small {
-    padding: .7rem 1.8rem;
-    font-size: 1rem;
+    padding: .9rem 1.3rem;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
 
 /*------ END GLOBAL STYLING ------*/
@@ -393,7 +394,7 @@ header .shape-8 {
 
 .card {
     position: relative;
-    width: 390px;
+    width: 300px;
     min-height: 300px;
     background-color: var(--light-blue);
     display: flex;
@@ -814,7 +815,7 @@ p.text {
 .contact {
     position: relative;
     width: 100%;
-    padding: 10.5rem 0 8.5rem;
+    padding: 8.5rem 0;
 }
 
 .contact:before, .contact:after {
@@ -1554,12 +1555,53 @@ p.text {
   /*------ SERVICES ------*/
   .services{
     background-color: #f4f8fb;
+    padding: 40px 0;
   }
+
+ .services h2{
+font-size: 2.8rem;
+  color: #E6ACDE;
+  padding: 1rem 0;
+}
+
+.services h3{
+  color: #E6ACDE;
+  font-size: 1.5rem;
+}
+
+.typewriter h3 {
+  color: #E6ACDE;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid #4F90C2; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .02em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #4F90C2  }
+}
+
+
 
    /*------ END SERVICES ------*/
   
   /*------ SERVICES / PRICING ------*/
-  
+  .pricing h6{
+    font-size: 1rem;
+  }
+
   .cards h4{
     font-size: 3rem;
     font-family: 'Limelight', cursive;
@@ -1571,6 +1613,14 @@ p.text {
     padding: 0.8rem 0 0.5rem 0;
     font-size: 1rem;
   }
+
+  .goals{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 3rem;
+    margin-bottom: -3rem;
+  }
+
 
    /*------ END SERVICES / PRICING ------*/
 
