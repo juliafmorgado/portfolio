@@ -1563,11 +1563,11 @@ font-size: 2.8rem;
   color: #E6ACDE;
   padding: 1rem 0;
 }
-
+/* 
 .services h3{
-  color: #E6ACDE;
+  color: black;
   font-size: 1.5rem;
-}
+} */
 
 .typewriter h3 {
   color: #E6ACDE;
@@ -1626,5 +1626,5 @@ font-size: 2.8rem;
 
    /*------ SERVICES / METRICS ------*/
 
-   
+
    /*------ END SERVICES / METRICS ------*/
