@@ -696,6 +696,7 @@ iframe{
 .w-block .blog-feed li a{
   text-decoration: none;
   transition: all 250ms;
+  text-align: center;
 }
 .w-block .blog-feed li a:hover {
   color: var(--blue-hover);
@@ -718,7 +719,7 @@ iframe{
 
 
 .carousel {
-  padding: 4rem 0 0 0;
+  padding: 4rem 0;
   background-color: var(--background-color);
 }
 
@@ -1569,8 +1570,23 @@ font-size: 2.8rem;
   font-size: 1.5rem;
 } */
 
+.typewriter{
+  text-align: center;
+  max-width: 92rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.typewriter h2{
+  color: #E6ACDE;
+  font-size: 2rem;
+  display: block;
+  padding: 1rem 0;
+}
+
 .typewriter h3 {
   color: #E6ACDE;
+  max-width: fit-content;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .1em solid #4F90C2; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
@@ -1614,17 +1630,48 @@ font-size: 2.8rem;
     font-size: 1rem;
   }
 
-  .goals{
-    text-align: center;
-    font-size: 2rem;
-    padding-top: 3rem;
-    margin-bottom: -3rem;
-  }
-
 
    /*------ END SERVICES / PRICING ------*/
 
-   /*------ SERVICES / METRICS ------*/
+   /*------ SERVICES / STATS ------*/
 
+  .stats{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 3rem;
+  }
 
-   /*------ END SERVICES / METRICS ------*/
+  .stats-icon{
+    min-width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--blue);
+    color: var(--background-color);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    }
+
+    .stats-icon i {
+      line-height: 100px;
+    }
+
+    .stats h3{
+      font-size: 1.5rem;
+    }
+
+    .stats h5{
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin: 0.2rem 0;
+    }
+
+    .stats p{
+      font-size: 0.8rem;
+      color: #4F90C2;
+    }
+
+   /*------ END SERVICES / STATS ------*/
