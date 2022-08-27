@@ -76,3 +76,4 @@ fetch(finalURL)
     function buildURL(username){
         return `${api}username=${username}`
     }
+

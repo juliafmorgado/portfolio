@@ -216,7 +216,8 @@ nav .container {
     justify-content: space-between;
     height: 6rem;
     align-items: center;
-}
+    padding: 0;
+  }
 
 .banner-title {
   padding: .5rem 0;
@@ -245,7 +246,7 @@ nav .container {
     border-radius: 2rem;
     font-size: 1rem;
     padding: .9rem 2.1rem;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 .links a:hover {
@@ -404,6 +405,7 @@ header .shape-8 {
     padding: 3rem 2rem;
     overflow: hidden;
     transition: .3s;
+    box-shadow: 5px 5px #7996ab1d;
 }
 
 .card:before {
@@ -1147,6 +1149,7 @@ p.text {
   
     nav .container {
       height: 4.5rem;
+      margin-right: 5rem;
     }
   
     .header-content .container.grid-2 {
@@ -1500,12 +1503,34 @@ p.text {
     .followme-wrap {
       margin-top: 0.8rem;
     }
+
+    .stats{
+
+      flex-wrap: wrap;
+      margin: 2rem;
+    }
+    .stats-box{
+flex: 0 0 33.3333%;
+margin: 2rem;
+    }
+
+  }
+
+  @media (max-width: 650px) {
+
+    .stats-box{
+      flex: 0 0 50%;
+          }
   }
   
   @media (max-width: 600px) {
     .grid-item {
       width: 100%;
     }
+    .stats-box{
+      flex: 0 0 53.3333%;
+      margin: 1rem;
+          }
   }
   
   @media (max-width: 560px) {
@@ -1574,7 +1599,7 @@ font-size: 2.8rem;
   text-align: center;
   max-width: 92rem;
   margin: 0 auto;
-  padding: 0 4rem;
+  padding: 0 4rem 2rem 0;
 }
 
 .typewriter h2{
@@ -1609,10 +1634,14 @@ font-size: 2.8rem;
   50% { border-color: #4F90C2  }
 }
 
-
-
    /*------ END SERVICES ------*/
+
+  /*------ SERVICES / ACCORDION ------*/
   
+  
+
+/*------ END SERVICES / PRICING ------*/
+
   /*------ SERVICES / PRICING ------*/
   .pricing h6{
     font-size: 1rem;
