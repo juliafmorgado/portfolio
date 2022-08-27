@@ -1704,3 +1704,26 @@ font-size: 2.8rem;
     }
 
    /*------ END SERVICES / STATS ------*/
+
+   /* SOCIAL PACKAGES */
+.details{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.details ul{
+  line-height: 2.5rem;
+}
+
+.details li{
+  font-size: 1.3rem;
+}
+
+.details i{
+  color: #4F90C2;
+  font-size: 1.8rem;
+  margin-right: 1rem;
+}
+
+
+   /* END SOCIAL PACKAGES */
