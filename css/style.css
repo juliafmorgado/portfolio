@@ -1786,3 +1786,8 @@ font-size: 2.8rem;
   }
    
    /* END GALLERY */
+   /* CALENDAR */
+   .events{
+    align-items: center;
+   }
+    /* END CALENDAR */
