@@ -1788,6 +1788,15 @@ font-size: 2.8rem;
    /* END GALLERY */
    /* CALENDAR */
    .events{
-    align-items: center;
+    text-align: center;
+   }
+
+   .events h2{
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+   }
+
+   .events li{
+    font-size: 1.3rem;
    }
     /* END CALENDAR */
