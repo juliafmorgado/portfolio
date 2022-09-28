@@ -97,11 +97,13 @@ fetch(finalURL)
     
     
       //Auto Embed Latest Videos from Youtube Channel
+      //Specified my unique channel ID
       var channelID = "UC_un3YZXBtAlCyApGu4_eSQ";
-      var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+      //
+      var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=" + channelID);
 
       function loadVideo(iframe) {
-        $.getJSON(reqURL + channelID,
+        $.getJSON(reqURL,
           function(data) {
             var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
             console.log(videoNumber);
