@@ -108,7 +108,7 @@ fetch(finalURL)
         const cid = "UC_un3YZXBtAlCyApGu4_eSQ";
         const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
         const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
-        //In the fetch request, we pass in a requestOptions object, then use it to fetch a .json file. When the fetch is successful, we read and parse the result using json(), then read values out of the resulting objects and set the appropriate URL in the src to display each video accordingly.
+        //In the fetch request, we pass in the URL to access (reqURL) and a requestOptions object, then use it to fetch a .json file. When the fetch is successful, we read and parse the result using json(), then read values out of the resulting objects and set the appropriate URL in the src to display each video accordingly.
         fetch(reqURL, requestOptions)
             .then(response => response.json())
             .then(result => {
