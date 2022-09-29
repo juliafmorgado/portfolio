@@ -100,7 +100,7 @@ fetch(finalURL)
     
 
       const requestOptions = {
-        method: 'GET',
+        method: 'GET', //HTTP method
         redirect: 'follow'
     };
     
@@ -113,7 +113,8 @@ fetch(finalURL)
             .then(response => response.json())
             .then(result => {
               console.log(result)
-                const videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                const videoNumber = iframe.getAttribute('vnum')
+                console.log(videoNumber)
                 const link = result.items[videoNumber].link;
                 const id = link.substr(link.indexOf("=") + 1);
                 iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=1`);

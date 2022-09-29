@@ -456,17 +456,14 @@ header .shape-8 {
 .videos{
 display: flex;
 justify-content: center;
-flex-direction: row;
 }
 
-.video{
-padding: 2rem;
-}
 
 iframe{
   width: 450px;
   height: 253px;
   max-width: 100%;
+  padding: 2rem;
 }
 
 @media (max-width: 1400px) {
