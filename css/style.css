@@ -458,12 +458,11 @@ display: flex;
 justify-content: center;
 }
 
-
 iframe{
   width: 450px;
   height: 253px;
   max-width: 100%;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 @media (max-width: 1400px) {
