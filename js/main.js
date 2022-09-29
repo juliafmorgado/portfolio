@@ -97,36 +97,29 @@ fetch(finalURL)
     
     
       //Auto Embed Latest Videos from Youtube Channel
-      //Specified my unique channel ID
-      var channelID = "UC_un3YZXBtAlCyApGu4_eSQ";
-      //Build a URL from URLs and a query string parameter to send the get request to
-      //safely encode a URL using JavaScript such that it can be put into a GET string
-      //The rss2json API allows developers to convert an RSS feed  into proper formated JSON data by submitting its URL
-      var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=" + channelID);
+    
 
-      //Call 
-      function loadVideo(iframe) {
-        //The jQuery getJSON() method is used to get JSON data using an AJAX HTTP GET request
-        $.getJSON(reqURL,
-          function(data) {
-          //The success callback passes the returned data, which is a JavaScript an array of objects
-            console.log(data)
-            //get number of videos we want, if number not specified will get the latest video. Ternary operator not necessary in this case.
-            var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
-            console.log(videoNumber);
-            //get the URL from each item
-            var link = data.items[videoNumber].link;
-            //get the specific query parameter of each link
-            id = link.substr(link.indexOf("=") + 1);
-            //set each src to the link with the appropriate query parameter
-            iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
-          }
-        );
-      }
-      
-      //Using this structure, the function loops through the requested data and appends a video for each numbered xxx
-      var iframes = document.getElementsByClassName('latestVideoEmbed');
-      for (var i = 0, len = iframes.length; i < len; i++) {
+      const requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+    };
+    
+    const loadVideo = (iframe) => {
+        const cid = "UC_un3YZXBtAlCyApGu4_eSQ";
+        const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
+        const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+        fetch(reqURL, requestOptions)
+            .then(response => response.json())
+            .then(result => {
+              console.log(result)
+                const videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                const link = result.items[videoNumber].link;
+                const id = link.substr(link.indexOf("=") + 1);
+                iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=1`);
+            })
+            .catch(error => console.log('error', error));
+    }
+    var iframes = document.getElementsByClassName('latestVideoEmbed');
+    for (var i = 0, len = iframes.length; i < len; i++) {
         loadVideo(iframes[i]);
-      }
-      
+    }
