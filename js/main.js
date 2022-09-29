@@ -109,7 +109,7 @@ fetch(finalURL)
         //The jQuery getJSON() method is used to get JSON data using an AJAX HTTP GET request
         $.getJSON(reqURL,
           function(data) {
-          //The success callback is passed the returned data, which is typically a JavaScript object or array
+          //The success callback passes the returned data, which is a JavaScript an array of objects
             console.log(data)
             //get number of videos we want, if number not specified will get the latest video. Ternary operator not necessary in this case.
             var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
