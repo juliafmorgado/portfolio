@@ -98,23 +98,16 @@ fetch(finalURL)
     
       //Auto Embed Latest Videos from Youtube Channel
     
-
-    //   const requestOptions = {
-    //     method: 'GET', //HTTP method
-    //     redirect: 'follow'
-    // };
-    
     const loadVideo = (iframe) => {
         const cid = "UC_un3YZXBtAlCyApGu4_eSQ";
         const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
         const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
-        //In the fetch request, we pass in the URL to access (reqURL) and a requestOptions object, then use it to fetch a .json file. When the fetch is successful, we read and parse the result using json(), then read values out of the resulting objects and set the appropriate URL in the src to display each video accordingly.
+        //In the fetch request, we pass in the URL to access (reqURL) and, then use it to fetch a .json file. When the fetch is successful, we read and parse the result using json(), then read values out of the resulting objects and set the appropriate URL in the src to display each video accordingly.
         fetch(reqURL)
             .then(response => response.json())
             .then(result => {
               console.log(result)
                 const videoNumber = iframe.getAttribute('vnum')
-                console.log(videoNumber)
                 const link = result.items[videoNumber].link;
                 const id = link.substr(link.indexOf("=") + 1);
                 iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=1`);
