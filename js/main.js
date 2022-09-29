@@ -109,7 +109,7 @@ fetch(finalURL)
               console.log(result)
                 const videoNumber = iframe.getAttribute('vnum')
                 const link = result.items[videoNumber].link;
-                const id = link.substr(link.indexOf("=") + 1);
+                const id = link.substring(link.indexOf("=") + 1);
                 iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=1`);
             })
             .catch(error => console.log('error', error));
