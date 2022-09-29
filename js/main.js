@@ -99,10 +99,14 @@ fetch(finalURL)
       //Auto Embed Latest Videos from Youtube Channel
       //Specified my unique channel ID
       var channelID = "UC_un3YZXBtAlCyApGu4_eSQ";
-      //
+      //Build a URL from URLs and a query string parameter to send the get request to
+      //safely encode a URL using JavaScript such that it can be put into a GET string
+      //The rss2json API allows developers to convert an RSS feed  into proper formated JSON data by submitting its URL
       var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=" + channelID);
 
+      //Call 
       function loadVideo(iframe) {
+        //The jQuery getJSON() method is used to get JSON data using an AJAX HTTP GET request
         $.getJSON(reqURL,
           function(data) {
             var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
@@ -110,7 +114,6 @@ fetch(finalURL)
             var link = data.items[videoNumber].link;
             id = link.substr(link.indexOf("=") + 1);
             iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
-            // iframe.parentElement.querySelector("#video-title").innerText = title;
           }
         );
       }
