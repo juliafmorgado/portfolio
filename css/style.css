@@ -1725,7 +1725,6 @@ font-size: 2.8rem;
    /* END SOCIAL PACKAGES */
 
    /* GALLERY */
-
   #gallery{
     -webkit-column-count:4;
     -moz-column-count:4;
@@ -1767,7 +1766,7 @@ font-size: 2.8rem;
   #gallery img,#gallery video {
     width:100%;
     height:auto;
-    margin: 4% auto;
+    margin: auto;
     box-shadow:-3px 5px 15px #000;
     cursor: pointer;
     -webkit-transition: all 0.2s;
@@ -1780,8 +1779,96 @@ font-size: 2.8rem;
   .modal-body{
     padding:0px;
   }
+
+  .cap {
+    background-color: #4F90C2;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .cap * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.45s ease;
+    transition: all 0.45s ease;
+  }
+  
+  .cap:after {
+    background-color: white;
+    opacity: 0.6;
+    top: 0;
+    bottom: 0;
+    content: '';
+    left: -100%;
+    position: absolute;
+    width: 200px;
+    box-shadow: 0 0 100px white;
+    -webkit-transform: skew(-20deg);
+    transform: skew(-20deg);
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+  }
+  
+  .cap img {
+    vertical-align: top;
+    max-width: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .cap figcaption {
+    position: absolute;
+    top: 1rem;
+    bottom: 0;
+    left: 1rem;
+    right: 0;
+    z-index: 1;
+    line-height: 1em;
+    opacity: 0;
+  }
+  
+  .cap p {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-weight: 400;
+    line-height: 1.1em;
+    margin: 0;
+  }
+  
+  .cap p span {
+    font-weight: 700;
+  }
+  
+  
+  .cap:hover > img,
+  .cap.hover > img {
+    opacity: 0.4;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }
+  
+  .cap:hover:after,
+  .cap.hover:after {
+    left: 200%;
+  }
+  
+  .cap:hover figcaption,
+  .cap.hover figcaption {
+    opacity: 1;
+  }
+  
+
    
    /* END GALLERY */
+
+
+
    /* CALENDAR */
    .events{
     text-align: center;

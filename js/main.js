@@ -118,3 +118,6 @@ fetch(finalURL)
     for (let i = 0, len = iframes.length; i < len; i++) {
         loadVideo(iframes[i]);
     }
+
+
+    // Gallery
