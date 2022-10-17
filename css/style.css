@@ -1903,3 +1903,11 @@ font-size: 2.8rem;
     .collab-text{
       padding-left: 1rem;
     }
+    @media (max-width:800px){
+      .collab{
+ display: block;
+    }
+    .collab-text{
+      padding-top: 1rem;
+    }
+    }
